@@ -116,3 +116,29 @@ Durante el desarrollo se tomaron decisiones estrictas enfocadas en el rendimient
 * **Sincronización en Tiempo Real con React Query:** Se delegó la gestión de estado asíncrono a `@tanstack/react-query`. Implementando un `refetchInterval` invisible de 30 segundos tanto en el catálogo como en la vista de detalles, la interfaz refleja cambios de stock y precio en tiempo real sin recargar la página.
 * **Gestión de Errores Visuales (Image Fallbacks):** Para manejar la inconsistencia o caída de los enlaces a imágenes de las APIs externas, se implementó una captura mediante `onError` en React. Esta solución genera dinámicamente imágenes de reemplazo (*placeholders*) legibles usando el nombre del producto, evitando que la interfaz se vea rota.
 * **Búsqueda Predictiva de Fechas:** Se mejoró el algoritmo de filtrado de años en el backend para funcionar por coincidencias de prefijo.
+
+## 3: Diagrama de Flujo
+
+
+```mermaid
+sequenceDiagram
+    autonumber
+    actor Cliente as Frontend (React)
+    participant API as Backend (Node.js)
+    participant Memoria as Caché Unificada (RAM)
+    participant Proveedores as APIs Externas (3 tiendas)
+
+    Note over API, Proveedores: 1. Proceso en Segundo Plano (Cada 30s)
+    loop Sincronización Continua
+        API->>Proveedores: Fetch de catálogos y ofertas
+        Proveedores-->>API: Retorna 3 esquemas JSON distintos
+        API->>API: Ejecuta Mapper y normaliza datos
+        API->>Memoria: Actualiza estado en memoria
+    end
+
+    Note over Cliente, Memoria: 2. Petición del Usuario (Tiempo Real)
+    Cliente->>API: GET /api/catalog (Aplica filtros de búsqueda)
+    API->>Memoria: Consulta repuestos en memoria
+    Memoria-->>API: Retorna coincidencia en <5ms
+    API-->>Cliente: JSON unificado y rápido
+```

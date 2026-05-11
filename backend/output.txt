@@ -1,0 +1,356 @@
+◇ injected env (2) from .env // tip: ◈ secrets for agents [www.dotenvx.com]
+🔍 Iniciando peticiones de exploración...
+
+=== 📦 JSON AutoPartsPlus ===
+{
+  "success": true,
+  "request_id": "APP-1778457776528-uzmaxjujq",
+  "timestamp": "2026-05-11T00:02:56.528Z",
+  "latency_ms": 181,
+  "total_results": 1,
+  "parts": [
+    {
+      "part_id": "APP-CL-MOC6KMQW",
+      "sku": "CL-MOC6KMQW",
+      "oem_code": "46360-R13",
+      "title": "Filtro Deshidratador Trasero",
+      "desc": "Filtro Deshidratador Trasero nuevo de la marca Mann Filter para máximo rendimiento",
+      "brand_name": "Mann Filter",
+      "category_name": "Climatización",
+      "unit_price": 302224,
+      "currency_code": "CLP",
+      "qty_available": 3,
+      "warehouse_location": "Santiago Centro",
+      "weight_value": 12.6,
+      "weight_unit": "kg",
+      "img_urls": [
+        "https://example.com/images/cl-moc6kmqw-1.jpg"
+      ],
+      "fits_vehicles": [
+        "Subaru Outback 2000-2006",
+        "Acura RSX 2010-2011 3.5L V6 LE",
+        "Chevrolet Tahoe 2008-2010 1.6L"
+      ],
+      "spec_keys": [
+        "type"
+      ],
+      "spec_values": [
+        "Estándar"
+      ]
+    }
+  ]
+}
+
+-------------------------------------------------
+
+=== 📦 JSON RepuestosMax ===
+{
+  "exito": true,
+  "consulta": {
+    "id": "RM-20260511-ASOWFFNF",
+    "fechaHora": "2026-05-11T00:02:56.918Z",
+    "parametros": {
+      "codigo": "EL-MOC6KN4H"
+    },
+    "tiempoRespuestaMs": 251
+  },
+  "resultado": {
+    "cantidadTotal": 1,
+    "productos": [
+      {
+        "identificacion": {
+          "codigoInterno": "RM-EL-MOC6KN4H",
+          "sku": "EL-MOC6KN4H",
+          "codigoOEM": "61176-E51"
+        },
+        "informacionBasica": {
+          "nombre": "Alternador Delantero",
+          "descripcion": "Alternador Delantero genuino de la marca Mobil para máximo rendimiento",
+          "marca": {
+            "nombre": "Mobil"
+          },
+          "categoria": {
+            "nombre": "Eléctrico",
+            "id": "CAT-005"
+          }
+        },
+        "precio": {
+          "valor": 217928,
+          "moneda": "CLP",
+          "incluyeIVA": true,
+          "descuentoDisponible": true
+        },
+        "inventario": {
+          "cantidad": 33,
+          "estado": "disponible",
+          "ubicacion": {
+            "bodega": "Santiago Centro",
+            "sector": "C1"
+          },
+          "tiempoDespachoEstimado": "24-48 horas"
+        },
+        "caracteristicas": {
+          "peso": {
+            "valor": 16.3,
+            "unidad": "kg"
+          },
+          "especificaciones": {
+            "voltage": "12V",
+            "capacity": "66Ah"
+          }
+        },
+        "multimedia": {
+          "imagenes": [
+            {
+              "url": "https://example.com/images/el-moc6kn4h-1.jpg",
+              "tipo": "principal"
+            }
+          ]
+        },
+        "compatibilidad": {
+          "vehiculos": [
+            {
+              "fabricante": "Nissan",
+              "modelo": "Pathfinder",
+              "anios": {
+                "desde": 2010,
+                "hasta": 2017
+              },
+              "motor": "2.0L Turbo"
+            },
+            {
+              "fabricante": "Subaru",
+              "modelo": "Forester",
+              "anios": {
+                "desde": 2000,
+                "hasta": 2005
+              },
+              "version": "Sport"
+            }
+          ]
+        }
+      }
+    ]
+  }
+}
+
+-------------------------------------------------
+
+=== 📦 JSON GlobalParts ===
+{
+  "ResponseEnvelope": {
+    "Header": {
+      "TransactionId": "GP-TXN-MP0FUCBK-A2CXMXSC",
+      "Timestamp": "2026-05-11T00:02:58.400Z",
+      "RequestInfo": {
+        "Method": "GET",
+        "Endpoint": "/api/globalparts/inventory/search",
+        "Parameters": {
+          "PartNumber": "ES-MOC6KMNZ"
+        }
+      },
+      "ProcessingMetrics": {
+        "LatencyMilliseconds": 1342,
+        "ServerNode": "GP-NODE-8",
+        "CacheHit": false
+      }
+    },
+    "Body": {
+      "SearchResults": {
+        "TotalCount": 1,
+        "PageInfo": {
+          "CurrentPage": 1,
+          "TotalPages": 1,
+          "ItemsPerPage": 50
+        },
+        "Items": [
+          {
+            "ItemHeader": {
+              "InternalId": "GP-ES-MOC6KMNZ-1778457778400",
+              "ExternalReferences": {
+                "SKU": {
+                  "Value": "ES-MOC6KMNZ",
+                  "Type": "INTERNAL_SKU"
+                },
+                "OEM": {
+                  "Value": "48088-Q93",
+                  "Manufacturer": "Delphi"
+                }
+              }
+            },
+            "ProductDetails": {
+              "NameInfo": {
+                "DisplayName": "Silenciador",
+                "ShortName": "Silenciador",
+                "TechnicalName": "Delphi 48088-Q93"
+              },
+              "Description": {
+                "FullText": "Silenciador original de la marca Delphi para máximo rendimiento",
+                "Language": "es-CL"
+              },
+              "BrandInfo": {
+                "BrandName": "Delphi",
+                "BrandCode": "DEL",
+                "IsOEM": true
+              },
+              "CategoryInfo": {
+                "PrimaryCategory": {
+                  "Name": "Escape",
+                  "Code": "EXH"
+                },
+                "SubCategory": {
+                  "Name": "Escape",
+                  "Code": "EXH-001"
+                }
+              }
+            },
+            "PricingInfo": {
+              "ListPrice": {
+                "Amount": 61605,
+                "CurrencyCode": "CLP",
+                "CurrencySymbol": "$"
+              },
+              "TaxInfo": {
+                "TaxIncluded": true,
+                "TaxRate": 0.19,
+                "TaxAmount": 9836
+              },
+              "DiscountInfo": {
+                "DiscountAvailable": false,
+                "MaxDiscountPercent": 0
+              }
+            },
+            "AvailabilityInfo": {
+              "StockStatus": {
+                "Code": "IN_STOCK",
+                "Description": "Disponible en stock"
+              },
+              "QuantityInfo": {
+                "AvailableQuantity": 17,
+                "ReservedQuantity": 1,
+                "MinOrderQuantity": 1,
+                "MaxOrderQuantity": 17
+              },
+              "WarehouseInfo": {
+                "PrimaryWarehouse": {
+                  "Name": "Santiago Centro",
+                  "Code": "SCL-CTR",
+                  "Country": "CL"
+                }
+              },
+              "ShippingInfo": {
+                "EstimatedShipDate": "2026-05-12",
+                "EstimatedDeliveryDays": 3,
+                "ShippingMethods": [
+                  "STANDARD",
+                  "EXPRESS",
+                  "PICKUP"
+                ]
+              }
+            },
+            "PhysicalAttributes": {
+              "Weight": {
+                "Value": 7.4,
+                "Unit": "kg",
+                "UnitCode": "KGM"
+              }
+            },
+            "TechnicalSpecifications": {
+              "SpecificationList": [
+                {
+                  "SpecificationName": "type",
+                  "SpecificationValue": "Estándar"
+                }
+              ]
+            },
+            "MediaAssets": {
+              "Images": [
+                {
+                  "ImageId": "IMG-ES-MOC6KMNZ-1",
+                  "ImageUrl": "https://example.com/images/es-moc6kmnz-1.jpg",
+                  "ImageType": "PRIMARY",
+                  "Resolution": "1024x1024",
+                  "IsPrimary": true
+                }
+              ]
+            },
+            "VehicleCompatibility": {
+              "CompatibilityCount": 3,
+              "CompatibleVehicles": [
+                {
+                  "VehicleId": "VEH-1-1778457778400",
+                  "Manufacturer": {
+                    "Name": "Honda",
+                    "Code": "HON"
+                  },
+                  "Model": {
+                    "Name": "Fit",
+                    "Code": "HOFIT"
+                  },
+                  "YearRange": {
+                    "StartYear": 2000,
+                    "EndYear": 2004
+                  },
+                  "TrimLevel": {
+                    "Name": "SR5"
+                  },
+                  "CompatibilityNotes": "Verificar año exacto del vehículo antes de comprar"
+                },
+                {
+                  "VehicleId": "VEH-2-1778457778400",
+                  "Manufacturer": {
+                    "Name": "Mercedes-Benz",
+                    "Code": "MER"
+                  },
+                  "Model": {
+                    "Name": "A-Class",
+                    "Code": "MEA-C"
+                  },
+                  "YearRange": {
+                    "StartYear": 2007,
+                    "EndYear": 2014
+                  },
+                  "CompatibilityNotes": "Verificar año exacto del vehículo antes de comprar"
+                },
+                {
+                  "VehicleId": "VEH-3-1778457778400",
+                  "Manufacturer": {
+                    "Name": "Kia",
+                    "Code": "KIA"
+                  },
+                  "Model": {
+                    "Name": "Sportage",
+                    "Code": "KISPO"
+                  },
+                  "YearRange": {
+                    "StartYear": 2003,
+                    "EndYear": 2008
+                  },
+                  "TrimLevel": {
+                    "Name": "XLE"
+                  },
+                  "CompatibilityNotes": "Verificar año exacto del vehículo antes de comprar"
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    "Footer": {
+      "ResponseStatus": {
+        "StatusCode": "SUCCESS",
+        "StatusMessage": "Operación completada exitosamente"
+      },
+      "Pagination": {
+        "HasMoreResults": false
+      },
+      "RateLimitInfo": {
+        "RemainingRequests": 45,
+        "ResetTimestamp": "2026-05-11T00:03:58.400Z"
+      }
+    }
+  }
+}
+
+✅ Exploración finalizada.

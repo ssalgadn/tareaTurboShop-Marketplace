@@ -1,5 +1,9 @@
 export default function ProductCard({ product, onOpenDetails }) {
-  const precioMasBajo = Math.min(...product.offers.map(o => o.price));
+  const offersWithStock = product.offers.filter(o => o.stock > 0);
+
+  const validOffers = offersWithStock.length > 0 ? offersWithStock : product.offers;
+
+  const precioMasBajo = validOffers.length > 0 ? Math.min(...validOffers.map(o => o.price)) : 0;
 
   return (
     <div 
@@ -53,7 +57,10 @@ export default function ProductCard({ product, onOpenDetails }) {
       </div>
 
       <p style={{ fontWeight: '800', fontSize: '1.3rem', margin: '0.5rem 0 0 0', color: 'var(--primary-purple)' }}>
-        Desde ${precioMasBajo.toLocaleString('es-CL')}
+        {precioMasBajo > 0 
+          ? `Desde $${precioMasBajo.toLocaleString('es-CL')}` 
+          : 'Precio no disponible'
+        }
       </p>
       
       <small style={{ color: '#6b7280', fontSize: '0.85rem' }}>

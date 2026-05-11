@@ -10,7 +10,6 @@ import ProductModal from '../components/ProductModal';
 const fetchProducts = async ({ queryKey }) => {
   const [, filters] = queryKey;
   const API_URL = import.meta.env.VITE_BACKEND_URL;
-  console.log("🔥 Vite está leyendo esta URL:", API_URL);
   const response = await axios.get(`${API_URL}/api/catalog`, { params: filters });
   return response.data; 
 };
